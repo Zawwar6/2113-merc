@@ -12,6 +12,7 @@ const Home = () => {
 
       <Hero></Hero>
       <Services></Services>
+      <Video></Video>
     </div>
   )
 }
