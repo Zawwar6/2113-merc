@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+
 html, body {
     overflow-x: hidden;
 }
+.underdog {
+    font-family: "Underdog", system-ui;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .boldo {
+    font-family: "Boldonse", system-ui;
+    font-weight: 800;
+    font-style: normal;
+  }
+  .outfit{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

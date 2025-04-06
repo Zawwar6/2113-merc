@@ -18,7 +18,7 @@ const AppContent = () => {
 
   return (
    
-    <div className='h-screen   bg-white'>
+    <div className='h-screen outfit  bg-white'>
 
       {!hideNavbar && <Navbar />} 
       <Routes>
@@ -31,7 +31,7 @@ const AppContent = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:id" element={<Product />} />
       </Routes>
-      <Footer />
+     
 
     </div>
   );
