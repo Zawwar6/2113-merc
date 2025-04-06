@@ -18,8 +18,8 @@ const Hero = () => {
       <Navbar></Navbar>
 
         </div>
-        <div className="max-w-4xl ">
-          <h1 className="text-5xl underdog md:text-7xl font-bold mb-4">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
             PIONEERING THE FUTURE OF IMPORTS AND WHOLESALE SOLUTIONS
           </h1>
           <p className="text-lg  md:text-xl mb-6">
