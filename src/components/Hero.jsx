@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            PIONEERING THE FUTURE OF IMPORTS AND WHOLESALE SOLUTIONS
+            PIONEERIN THE FUTURE OF IMPORTS AND WHOLESALE SOLUTIONS
           </h1>
           <p className="text-lg md:text-xl mb-6">
             Revolutionizing the world of shipping and logistics, we integrate state-of-the-art technology with future-focused strategies to transform how goods move globally. Experience unparalleled efficiency and agility with our cutting-edge solutions designed to meet the demands of tomorrow, today.
