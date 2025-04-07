@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
 import Video from '../components/Video'
-
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -13,6 +13,8 @@ const Home = () => {
       <Hero></Hero>
       <Services></Services>
       <Video></Video>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }

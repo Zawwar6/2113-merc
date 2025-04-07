@@ -2,13 +2,13 @@ import React from 'react';
 
 const Video = () => {
   return (
-    <div className="w-full bg-white py-8 md:py-12 lg:py-16 relative overflow-x-hidden">
+    <div className="w-full bg-[#f44708] py-8 md:py-12 lg:py-16 relative overflow-x-hidden">
       {/* Animated Slider */}
       <div className="absolute top-4 md:top-8 left-0 w-full overflow-hidden">
         <div className="animate-slide-in-out w-max flex items-center">
-          <h1 className="text-[2rem] md:text-7xl lg:text-8xl font-black text-orange-400 uppercase 
+          <h1 className="text-[2rem] md:text-7xl lg:text-8xl font-extrabold text-black uppercase 
                          px-4 md:px-8 py-2 md:py-4" 
-              style={{ fontFamily: "'Poppins', 'Arial Black', sans-serif" }}>
+              style={{ fontFamily: "'boldo', 'outfit'" }}>
             EMBARK TODAY
             EMBARK TODAY
             EMBARK TODAY
@@ -55,7 +55,7 @@ const Video = () => {
           100% { transform: translateX(100%); }
         }
         .animate-slide-in-out {
-          animation: slide-in-out 500s linear infinite;
+          animation: slide-in-out 250s linear infinite;
         }
       `}</style>
     </div>
