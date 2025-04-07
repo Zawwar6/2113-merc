@@ -7,7 +7,7 @@ import Cart from './pages/Cart';
 import Product from './pages/Product';
 import Shop from './pages/Shop';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/Footer';     
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const AppContent = () => {
@@ -29,8 +29,9 @@ const AppContent = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/product" element={<Product />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/:id" element={<Product />} />
+        <Route path="/shop/:productId" element={<Product />} />
       </Routes>
+      <Footer></Footer>
      
 
     </div>

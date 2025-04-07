@@ -7,8 +7,8 @@ const ContactUs = () => {
       
       {/* Left side content */}
       <div className="md:w-[30%] space-y-6">
-        <h1 className="text-3xl my-4 sm:my-0 sm:text-7xl font-extrabold boldo gap-3 text-gray-900 leading-tight">
-          CONTACT <br/> US
+        <h1 className="text-3xl  my-4 sm:my-0 sm:text-7xl font-extrabold boldo gap-3 text-gray-900 leading-relaxed">
+          CONTACT <br/> <span className="text-orange-400">US</span> 
         </h1>
         <p className="text-lg text-gray-700 font-medium max-w-md">
           Interested in working together? Fill out some info and we will be in touch shortly.
