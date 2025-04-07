@@ -1,33 +1,35 @@
 import React from 'react';
 import Footer from '../components/Footer';
+import Product from '../components/Product';
 
 const ProductGrid = () => {
   const products = [
-    { image: '/p1.png', name: 'PRODUCT NAME', price: '$25.00' },
-    { image: '/p2.png', name: 'PRODUCT NAME', price: '$25.00' },
-    { image: '/prod2.jpg', name: 'PRODUCT NAME', price: '$25.00' },
-    { image: '/prod1.jpg', name: 'PRODUCT NAME', price: '$25.00' },
-    { image: '/prod2.jpg', name: 'PRODUCT NAME', price: '$25.00' },
-    { image: '/prod1.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod5.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod4.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod5.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod4.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod5.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod4.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod5.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod4.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+ 
+    { image: '/prod5.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod4.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod5.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/prod4.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    
+   
   ];
 
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center py-10 px-2 sm:px-4">
-        <div className="grid grid-cols-2 gap-3 sm:gap-6 w-full max-w-7xl">
+      <div className="min-h-screen flex flex-col gap-4 justify-center items-center py-10 px-2 sm:px-4">
+
+        <h1 className=' text-3xl sm:text-4xl boldo my-6 leading-relaxed uppercase '>Our Products Collection</h1>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2  sm:gap-8 w-full max-w-7xl">
           {products.map((product, index) => (
-            <div
-              key={index}
-              className=" p-2 sm:p-4  transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 sm:h-[500px] object-cover mb-2 sm:mb-4 rounded-md"
-              />
-              <div className="text-black font-bold text-xs sm:text-lg">{product.name}</div>
-              <div className="text-gray-700 text-xs sm:text-sm mt-1">{product.price}</div>
-            </div>
+           <Product product={product} index={index}></Product>
           ))}
         </div>
       </div>
