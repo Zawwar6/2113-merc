@@ -3,12 +3,12 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row items-center justify-center p-6 md:p-16 gap-12 font-sans">
+    <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row items-center justify-center mt-6 sm:mt-0 p-4 sm:p-6 md:p-16 gap-12 font-sans">
       
       {/* Left side content */}
-      <div className="md:w-1/2 space-y-6">
-        <h1 className="text-7xl font-extrabold text-gray-900 leading-tight">
-          CONTACT <br /> US
+      <div className="md:w-[30%] space-y-6">
+        <h1 className="text-3xl my-4 sm:my-0 sm:text-7xl font-extrabold boldo gap-3 text-gray-900 leading-tight">
+          CONTACT <br/> US
         </h1>
         <p className="text-lg text-gray-700 font-medium max-w-md">
           Interested in working together? Fill out some info and we will be in touch shortly.
@@ -18,7 +18,7 @@ const ContactUs = () => {
       </div>
 
       {/* Right side form */}
-      <div className="md:w-1/2 w-full bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-gray-200">
+      <div className="md:w-1/2 w-full bg-white/80 backdrop-blur-lg rounded-xl shadow-xl p-8 space-y-6 border border-gray-200">
         
         {/* Name Fields */}
         <div>

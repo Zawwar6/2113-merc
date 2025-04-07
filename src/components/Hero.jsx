@@ -18,11 +18,11 @@ const Hero = () => {
       <Navbar></Navbar>
 
         </div>
-        <div className="max-w-4xl">
+        <div className="w-full p-2 sm:max-w-4xl">
           <h1 className="text-5xl md:text-6xl underdog font-bold mb-4">
             PIONEERING THE FUTURE OF IMPORTS AND WHOLESALE SOLUTIONS
           </h1>
-          <p className="text-lg  md:text-xl mb-6">
+          <p className="text-md  md:text-xl mb-6">
             Revolutionizing the world of shipping and logistics, we integrate state-of-the-art technology with future-focused strategies to transform how goods move globally. Experience unparalleled efficiency and agility with our cutting-edge solutions designed to meet the demands of tomorrow, today.
           </p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full">

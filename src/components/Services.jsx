@@ -51,9 +51,9 @@ const Services = () => {
   }, []);
 
   return (
-    <div className='relative bg-black text-white min-h-screen overflow-hidden py-12  '>
+    <div className='relative bg-black text-white min-h-screen overflow-hidden pb-12 sm:py-12   '>
       {/* Diagonal Slash Decoration */}
-      <div className='absolute top-12 right-0 w-full h-48 bg-orange-600 transform -skew-y-4 origin-top-right' />
+      <div className='absolute sm:top-12 top-20 right-0 w-full h-24 sm:h-48 bg-orange-600 transform -skew-y-4 origin-top-right' />
 
       {/* Hero Section */}
       <div className='relative pt-32 px-4 text-center'>
@@ -73,16 +73,17 @@ const Services = () => {
 
         <div
           key={index}
-          className='flex flex-col items-center max-w-7xl mx-auto justify-center gap-10 mt-40 px-4'
+          className='flex flex-col items-center max-w-7xl mx-auto justify-center  sm:gap-10 mt-24 sm:mt-40 px-4'
           ref={(el) => (sectionRefs.current[index] = el)}
         >
 
-          <div className='flex flex-col md:flex-row items-center justify-between gap-10 w-full'>
+          <div className='flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 w-full'>
 
-            <DecayCard width={400} height={400} image={service.image} />
+            <DecayCard  width={350} height={350} image={service.image} />
+            <img className='h-[280px] rounded-xl w-[320px] sm:hidden' src={service.image} alt="" />
 
             <div className="desc flex flex-col max-w-4xl gap-4 text-center md:text-left">
-              <h1 className='text-xl sm:text-5xl font-semibold text-gray-300 tracking-wide'>{service.title}</h1>
+              <h1 className='text-xl sm:text-4xl font-semibold text-gray-300 tracking-wide'>{service.title}</h1>
               <p className='text-md sm:text-2xl text-gray-400 leading-relaxed'>{service.desc}</p>
               <p className='text-xl font-bold text-orange-600'>{service.price}</p>
             </div>

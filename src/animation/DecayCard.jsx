@@ -102,7 +102,7 @@ const DecayCard = ({
   return (
     <div
       ref={svgRef}
-      className="relative"
+      className="relative hidden sm:block"
       style={{ width: `${width}px`, height: `${height}px` }}
     >
       <svg
