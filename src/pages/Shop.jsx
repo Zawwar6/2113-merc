@@ -3,8 +3,8 @@ import Footer from '../components/Footer';
 
 const ProductGrid = () => {
   const products = [
-    { image: '/prod1.jpg', name: 'PRODUCT NAME', price: '$25.00' },
-    { image: '/prod2.jpg', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/p1.png', name: 'PRODUCT NAME', price: '$25.00' },
+    { image: '/p2.png', name: 'PRODUCT NAME', price: '$25.00' },
     { image: '/prod2.jpg', name: 'PRODUCT NAME', price: '$25.00' },
     { image: '/prod1.jpg', name: 'PRODUCT NAME', price: '$25.00' },
     { image: '/prod2.jpg', name: 'PRODUCT NAME', price: '$25.00' },
