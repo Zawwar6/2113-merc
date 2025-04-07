@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row items-center justify-center mt-6 sm:mt-0 p-4 sm:p-6 md:p-16 gap-12 font-sans">
+    <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row items-center justify-center mt-6 sm:mt-0 p-4 sm:p-6 md:p-16 gap-40 font-sans">
       
       {/* Left side content */}
       <div className="md:w-[30%] space-y-6">
