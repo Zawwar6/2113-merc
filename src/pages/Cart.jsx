@@ -103,8 +103,8 @@ const Cart = () => {
                       </div>
 
                       {/* Price and Controls */}
-                      <div className="flex flex-col items-end gap-4">
-                        <div className="text-lg font-medium text-gray-900">
+                      <div className="flex flex-col items-end gap-2">
+                        <div className="text-lg mr-20 font-medium text-gray-900">
                           ${(price * (item.quantity || 1)).toFixed(2)}
                         </div>
 

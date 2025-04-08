@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {Link} from 'react-router-dom'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,6 +82,12 @@ const Services = () => {
                 <p className="sm:text-lg  lg:text-xl text-gray-800 leading-relaxed">
                   {service.description}
                 </p>
+                <Link
+    to="/contact"
+    className="inline-block bg-orange-600 text-white font-semibold px-6 py-3 mt-4 rounded-lg hover:bg-orange-700 transition duration-300"
+  >
+    Get More Details
+  </Link>
               </div>
 
               {/* Image */}

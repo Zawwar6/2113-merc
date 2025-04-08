@@ -16,9 +16,9 @@ const ContactUs = () => {
           <span className="text-gray-900 font-semibold">We can’t wait to hear from you!</span>
         </p>
       </div>
-
+            <form className="md:w-1/2 w-full bg-white/80 backdrop-blur-lg rounded-xl shadow-xl p-8 space-y-6 border border-gray-200">
       {/* Right side form */}
-      <div className="md:w-1/2 w-full bg-white/80 backdrop-blur-lg rounded-xl shadow-xl p-8 space-y-6 border border-gray-200">
+      {/* <div className="md:w-1/2 w-full bg-white/80 backdrop-blur-lg rounded-xl shadow-xl p-8 space-y-6 border border-gray-200"> */}
         
         {/* Name Fields */}
         <div>
@@ -69,7 +69,8 @@ const ContactUs = () => {
             SEND
           </button>
         </div>
-      </div>
+      {/* </div> */}
+    </form>
     </div>
   );
 };
