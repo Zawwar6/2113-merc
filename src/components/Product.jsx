@@ -9,7 +9,7 @@ const Product = ({product,index}) => {
     <div className='overflow-hidden  flex items-center justify-center  my-3 '>
 
       <img
-        src={product.image}
+        src={product?.images[0]}
         alt={product.name}
         className="w-full h-48 sm:h-[280px]  transition-transform duration-300 hover:scale-110 object-cover "
       />

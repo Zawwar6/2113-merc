@@ -51,7 +51,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className='relative bg-black text-white min-h-screen overflow-hidden pb-12 sm:py-12   '>
+    <div className='relative bg-black my-12 text-white min-h-screen overflow-hidden pb-12 sm:py-12   '>
       {/* Diagonal Slash Decoration */}
       <div className='absolute sm:top-12 top-20 right-0 w-full h-24 sm:h-48 bg-orange-600 transform -skew-y-4 origin-top-right' />
 

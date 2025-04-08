@@ -1,39 +1,175 @@
-import React, { createContext,useEffect,useState } from "react";
-
+import React, { createContext, useEffect, useState } from "react";
 
 export const ProductContext = createContext();
 
 const ProductContextProvider = (props) => {
+    const [cart, setCart] = useState([]);
 
     const products = [
-        { id: 123456, image: '/prod5.jpg',  rating: 4.5, reviewCount: 45, name: 'PRODUCT NAME', price: '$25.00', description: 'A high-quality item perfect for everyday use, designed for durability and style.' },
-        { id: 234567, image: '/prod4.jpg', rating: 4.3, reviewCount: 56, name: 'PRODUCT NAME', price: '$25.00', description: 'An elegant product with modern features, ideal for enhancing your lifestyle.' },
-        { id: 345678, image: '/prod5.jpg', rating: 4.1, reviewCount: 53, name: 'PRODUCT NAME', price: '$25.00', description: 'Crafted with precision, this product offers unmatched performance and reliability.' },
-        { id: 456789, image: '/prod4.jpg', rating: 4.4, reviewCount: 56, name: 'PRODUCT NAME', price: '$25.00', description: 'A versatile item that combines functionality with a sleek, contemporary design.' },
-        { id: 567890, image: '/prod5.jpg', rating: 4.5, reviewCount: 12, name: 'PRODUCT NAME', price: '$25.00', description: 'Perfect for all occasions, this product is both practical and aesthetically pleasing.' },
-        { id: 678901, image: '/prod4.jpg', rating: 4.6, reviewCount: 23, name: 'PRODUCT NAME', price: '$25.00', description: 'Designed for comfort and efficiency, this item is a must-have for any collection.' },
-        { id: 789012, image: '/prod5.jpg', rating: 4.3, reviewCount: 34, name: 'PRODUCT NAME', price: '$25.00', description: 'A premium product that stands out with its innovative features and robust build.' },
-        { id: 890123, image: '/prod4.jpg', rating: 4.5, reviewCount: 45, name: 'PRODUCT NAME', price: '$25.00', description: 'This item offers exceptional value, blending style, and functionality seamlessly.' },
-        { id: 901234, image: '/prod5.jpg', rating: 4.2, reviewCount: 44, name: 'PRODUCT NAME', price: '$25.00', description: 'An essential product for modern living, packed with features to meet your needs.' },
-        { id: 12345, image: '/prod4.jpg', rating: 4.1, reviewCount: 87, name: 'PRODUCT NAME', price: '$25.00', description: 'A stylish and durable product, perfect for those who value quality and design.' },
-        { id: 23456, image: '/prod5.jpg', rating: 4.6, reviewCount: 32, name: 'PRODUCT NAME', price: '$25.00', description: 'This product is designed to impress, offering both utility and a modern aesthetic.' },
-        { id: 34567, image: '/prod4.jpg', rating: 4.2, reviewCount: 11, name: 'PRODUCT NAME', price: '$25.00', description: 'Ideal for professionals and enthusiasts, this item combines elegance with performance.' },
-];
-    const contextValue = { products }
+        { 
+          id: 123456, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],  
+          rating: 4.5, 
+          reviewCount: 45, 
+          name: 'Premium Wireless Headphones', 
+          price: 199.99, // Removed $ sign for numeric operations
+          description: 'Noise-canceling Bluetooth headphones with 40mm drivers and 30-hour battery life' 
+        },
+        { 
+          id: 234567, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.7, 
+          reviewCount: 112, 
+          name: '4K Action Camera', 
+          price: 349.99, // Removed $ sign for numeric operations
+          description: 'Waterproof adventure camera with 4K/60fps video and 20MP photos' 
+        },
+        { 
+          id: 345678, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.3, 
+          reviewCount: 89, 
+          name: 'Smart Fitness Tracker', 
+          price: 79.99, // Removed $ sign for numeric operations
+          description: '24/7 heart rate monitoring with GPS and 50m water resistance' 
+        },
+        { 
+          id: 456789, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.6, 
+          reviewCount: 204, 
+          name: 'Wireless Charging Station', 
+          price: 49.99, // Removed $ sign for numeric operations
+          description: '3-device Qi charging pad with over-temperature protection' 
+        },
+        { 
+          id: 567890, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.4, 
+          reviewCount: 156, 
+          name: 'Ergonomic Office Chair', 
+          price: 299.99, // Removed $ sign for numeric operations
+          description: 'Mesh-back executive chair with adjustable lumbar support' 
+        },
+        { 
+          id: 678901, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.8, 
+          reviewCount: 67, 
+          name: 'Professional Studio Mic', 
+          price: 149.99, // Removed $ sign for numeric operations
+          description: 'Cardioid condenser microphone with anti-vibration shock mount' 
+        },
+        { 
+          id: 789012, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.2, 
+          reviewCount: 34, 
+          name: 'Smart LED Plant Grow Light', 
+          price: 89.99, // Removed $ sign for numeric operations
+          description: 'Full spectrum indoor gardening light with smart scheduling' 
+        },
+        { 
+          id: 890123, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.9, 
+          reviewCount: 189, 
+          name: 'Portable Espresso Maker', 
+          price: 129.99, // Removed $ sign for numeric operations
+          description: 'Rechargeable coffee maker with 15-bar pressure system' 
+        },
+        { 
+          id: 901234, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.1, 
+          reviewCount: 97, 
+          name: 'Solar Power Bank', 
+          price: 59.99, // Removed $ sign for numeric operations
+          description: '20000mAh dual-input charger with IP67 waterproof rating' 
+        },
+        { 
+          id: 112233, 
+          images: ['/prod4.jpg', '/prod5.jpg', '/prod4.jpg', '/prod5.jpg'],
+          rating: 4.7, 
+          reviewCount: 142, 
+          name: '4K Drone with Camera', 
+          price: 499.99, // Removed $ sign for numeric operations
+          description: 'Foldable GPS drone with 3-axis gimbal and 1km transmission' 
+        }
+    ];
+      
+    const addToCart = (productId, quantity = 1) => {
+        setCart(prevCart => {
+            const existingItem = prevCart.find(item => item.productId === productId);
+            if (existingItem) {
+                return prevCart.map(item =>
+                    item.productId === productId
+                        ? { ...item, quantity: item.quantity + quantity }
+                        : item
+                );
+            }
+            return [...prevCart, { productId, quantity }];
+        });
+        
+        console.log("Item added to cart");
+    };
+    
+    // New updateCart function
+    const updateCart = (productId, newQuantity) => {
+        if (newQuantity <= 0) {
+            // If quantity is 0 or negative, remove the item
+            removeFromCart(productId);
+            return;
+        }
+        
+        setCart(prevCart => 
+            prevCart.map(item => 
+                item.productId === productId 
+                ? { ...item, quantity: newQuantity } 
+                : item
+            )
+        );
+        
+        console.log(`Updated product ${productId} quantity to ${newQuantity}`);
+    };
+    
+    const removeFromCart = (productId) => {
+        setCart(prevCart => prevCart.filter(item => item.productId !== productId));
+        console.log(`Removed product ${productId} from cart`);
+    };
+    
+    // Optional: Save cart to localStorage whenever it changes
+    useEffect(() => {
+        if (cart.length > 0) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    }, [cart]);
+    
+    // Optional: Load cart from localStorage on initial render
+    useEffect(() => {
+        const savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            try {
+                setCart(JSON.parse(savedCart));
+            } catch (error) {
+                console.error('Failed to parse cart from localStorage', error);
+            }
+        }
+    }, []);
+    
+    const contextValue = { 
+        products,
+        cart,
+        addToCart,
+        updateCart,  // Added the new updateCart function
+        removeFromCart
+    };
 
     return (
-
         <ProductContext.Provider value={contextValue}>
             {props.children}
         </ProductContext.Provider>
+    );
+};
 
-    )
-
-}
 export default ProductContextProvider;
-
-
-
-
-
-

@@ -59,9 +59,9 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="px-4 py-10 bg-white">
+    <section className="px-4 pb-8 sm:my-14  bg-white">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl boldo text-center sm:text-4xl font-bold my-2 leading-relaxed uppercase text-orange-600">
+        <h1 className="text-3xl boldo text-center sm:text-4xl font-bold my-8 sm:my-12 leading-relaxed uppercase text-orange-600">
           Our Services
         </h1>
         <div className="space-y-24">
@@ -69,16 +69,16 @@ const Services = () => {
             <div
               key={index}
               ref={(el) => (containerRef.current[index] = el)}
-              className={`flex flex-col lg:flex-row items-center gap-12 ${
+              className={`flex flex-col-reverse lg:flex-row items-center gap-6 sm:gap-12 ${
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Text */}
               <div className="lg:w-1/2">
-                <h3 className="text-3xl boldo font-semibold text-black mb-4">
+                <h3 className="sm:text-3xl text-xl boldo font-semibold text-black mb-4">
                   {service.title}
                 </h3>
-                <p className="text-lg lg:text-xl text-gray-800 leading-relaxed">
+                <p className="sm:text-lg  lg:text-xl text-gray-800 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -88,7 +88,7 @@ const Services = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="rounded-2xl w-full h-[500px]"
+                  className="sm:rounded-2xl rounded-md w-full h-72 sm:h-[500px]"
                 />
               </div>
             </div>
